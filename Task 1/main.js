@@ -2,17 +2,33 @@
 factorial of number
 */
 
-let userNumber = 5;  
+let userNumber = 5;
 
 function factorial(userNumber) {
   let result = 1;
   for (let i = userNumber; i > 0; i--) {
-    result *= i;  
+    result *= i;
   }
   return result;
 }
 
 console.log("The factorial of " + userNumber + " is: " + factorial(userNumber));
+
+
+
+// print the number that between num1 and num2
+
+function odd(num1, num2, isEven) {
+    for (let i = num1; i <= num2; i++) {
+      if (i % 2 !== 0) {
+        console.log(i);
+      }
+    }
+  }
+  
+  odd(5, 30);
+  
+
 
 
 /*
@@ -22,12 +38,18 @@ create variable Calculate the value of zakat for x ,If you know the percentage o
 
 */
 
-// let x = 250;
-// let zakatPercentage = 2.5;
+let x = 250;
+let zakatPercentage = 2.5;
 
-// let calcZakat = (x * zakatPercentage) / 100;
+if (x >= 4000) 
+    let calcZakat = (x * zakatPercentage) / 100;
+document.write(calcZakat);
+else 
+document.write(x + "has not Zakat");
 
-// document.write(calcZakat);
+
+
+
 
 /*
 Array Tasks : 
@@ -37,17 +59,17 @@ Correct the syntax error
 
  ["Str" "alex","moh"
 
- 'the','fox' 'over' lazy, 'dog',  ]
+ 'the','fox' 'over' 'lazy', 'dog',  ]
 
 */
 
 // correct answer
 
-//  [ 1,7,  9 , 45, ]
+ [ 1,7,  9 , 45, ]
 
-//  ["Str", "alex","moh",
+ ["Str", "alex","moh",
 
-//  'the','fox', 'over', lazy, 'dog']
+ 'the','fox', 'over', 'lazy', 'dog']
 
 /*
 2
@@ -56,9 +78,9 @@ var fruits=["Tomato","Banana","Watermelon"]
 
 */
 
-// var fruits=["Tomato","Banana","Watermelon"];
-// console.log(fruits.indexOf("Banana"))
-// console.log(fruits.indexOf("Tomato"))
+var fruits=["Tomato","Banana","Watermelon"];
+console.log(fruits.indexOf("Banana"))
+console.log(fruits.indexOf("Tomato"))
 
 /*
 3
@@ -68,7 +90,9 @@ Create an array represents your:
 3- Favorite Movie (2)
 */
 
-// let myFavoriteFood = ["Apple", "Football", "Braking Bad"];
+let myFavoriteFood = ["Apple", "Orange"];
+let myFavoriteSport = ["Foorball", "Basketball", "Baseball"];
+let myFavoriteMovie = ["BrakingBad", "inseption"];
 
 /*
 4
@@ -77,11 +101,11 @@ Ex: firstOfArray([1,4,5]) => 1
 Ex: firstOfArray(["t","u","g","x"]) => "t"
 */
 
-// let firstOfArray = [1,4,5];
-// console.log(firstOfArray[0]);
+let firstOfArray = [1,4,5];
+console.log(firstOfArray[0]);
 
-// let secondArray = ["t","u","g","x"];
-// console.log(secondArray[0]);
+let secondArray = ["t","u","g","x"];
+console.log(secondArray[0]);
 
 /*
 5
@@ -91,11 +115,11 @@ Ex: lastOfArray([1,4,5]) => 5
 Ex: lastOfArray(["t","u","g","x"]) => "x"
 */
 
-// firstOfArray = [1,4,5];
-// console.log(firstOfArray[2]);
+firstOfArray = [1,4,5];
+console.log(firstOfArray[2]);
 
-// secondArray = ["t","u","g","x"];
-// console.log(secondArray[2]);
+secondArray = ["t","u","g","x"];
+console.log(secondArray[3]);
 
 /*
 6
@@ -107,19 +131,21 @@ var array = [0,5,7,9]
 
 // unshift get them at the first
 
-// var array = [0,5,7,9]
+var array = [0,5,7,9]
 
-// array.splice(0,1)
-// array.splice(0,0, 1)
-// array.splice(1,0, 3)
-// array.splice(2,0, 4)
-// array.splice(3,0, 6)
-// array.splice(4,0, 8)
-// array.splice(5,1)
-// array.splice(6,1)
-// array.splice(6,0, 10)
+//(index #add, #delete, the number that u want to add)
 
-// console.log(array);
+array.splice(0,1)
+array.splice(0,0, 1)
+array.splice(1,0, 3)
+array.splice(2,0, 4)
+array.splice(3,0, 6)
+array.splice(4,0, 8)
+array.splice(5,1)
+array.splice(6,1)
+array.splice(6,0, 10)
+
+console.log(array);
 
 /*
 7
@@ -128,7 +154,15 @@ Using the console try to figure out what the thing thats (push, unshift, shift, 
 var array2 = [5,9,-7,3.5]
 */
 
-// var array2 = [5,9,-7,3.5]
+var array2 = []
+
+array2.push(5);
+array2.push(9);
+array2.push(-7);
+array2.push(3.5);
+
+console.log(array2);
+
 
 // array2.push(7)
 // console.log(array2);
@@ -149,10 +183,10 @@ Sample array : var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 Sample Output : -4,-3,1,2,3,5,6,7,8
 */
 
-// var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
-//If the result of a - b is negative, a comes before b but If the result is positive, b comes before a.
-// arr1.sort((a, b) => a - b);
-// console.log(arr1);
+var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+// If the result of a - b is negative, a comes before b but If the result is positive, b comes before a.
+arr1.sort((a, b) => a - b);
+console.log(arr1);
 
 // 9.
 // Write a JavaScript function that returns rate as text
@@ -163,25 +197,25 @@ Sample Output : -4,-3,1,2,3,5,6,7,8
 // equal or between 80 and 89 ===> B
 // equal or between 90 and 100 ===> A
 
-// let grade;
-// function rate(grade)
-// {
-//     if (grade >= 50 && grade <= 59)
-//         return 'E'
-//     else if (grade >= 60 && grade <= 69)
-//         return 'D'
-//     else if (grade >= 70 && grade <= 79)
-//         return 'C'
-//     else if (grade >= 80 && grade <= 89)
-//         return 'B'
-//     else if (grade >= 90 && grade <= 100)
-//         return 'A'
-//     else if (grade < 50)
-//         return 'Fail'
+let grade;
+function rate(grade)
+{
+    if (grade >= 50 && grade <= 59)
+        return 'E'
+    else if (grade >= 60 && grade <= 69)
+        return 'D'
+    else if (grade >= 70 && grade <= 79)
+        return 'C'
+    else if (grade >= 80 && grade <= 89)
+        return 'B'
+    else if (grade >= 90 && grade <= 100)
+        return 'A'
+    else if (grade < 50)
+        return 'Fail'
 
-// }
+}
 
-// console.log(rate(90))
+console.log(rate(90))
 
 // 10.
 // Write a JS code to print a pattern using for loop
@@ -201,6 +235,14 @@ for (let i = 1; i < 10; i++) {
     line += j;
   }
   line += "\n";
-  document.write(line);
   console.log(line);
 }
+
+
+// another solution
+
+// let x =0;
+// for(let i = 1; i < 9; i++){
+//     x = x + i +" " 
+//     console.log(x); 
+// }
