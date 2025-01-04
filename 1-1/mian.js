@@ -9,10 +9,12 @@ myElement.style.border = "1px solid black"
 myElement.style.margin = "50px auto"
 
 
+
 //Method One
 
 function changeText(myPara) {
-    myPara.target.textContent = "Hello World !";
+    // myPara.target.textContent = "Hello World !";
+    myElement.innerHTML = "Hello World !"
 }
 
 myElement.addEventListener ("mouseover" , changeText)
@@ -85,7 +87,7 @@ changeSize.addEventListener("change", event => {
 
 
 // change the weight for bold,Italic,underline
-let changeWieght = document.getElementsByName("style"); // Get all checkboxes with name="style"
+let changeWieght = document.getElementsByName("style"); 
 
 for (let i = 0; i < changeWieght.length; i++) {
     changeWieght[i].addEventListener("change", (event) => {
@@ -95,13 +97,14 @@ for (let i = 0; i < changeWieght.length; i++) {
     if (event.target.id == "it") {
       textarea.style.fontStyle = event.target.checked ? "italic" : "normal"; // if its true that means the box is checked so apply italic and if false that mean the check box is unchecked so apply normal
     }
+
     if (event.target.id == "b") {
       textarea.style.fontWeight = event.target.checked ? "bold" : "normal";
     }
+
     if (event.target.id == "ul") {
-      textarea.style.textDecoration = event.target.checked
-        ? "underline"
-        : "none";
+      textarea.style.textDecoration = event.target.checked ? "underline": "none";
     }
   });
 }
+
