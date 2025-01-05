@@ -59,20 +59,7 @@ Ex: calculateSupply(30, 3);
 => 'You will need 76650 cups of tea to last you until the ripe old age of 100;
 */
 
-function calculateSupply(age, amoutPerDay) {
-  let remainAge = 100 - age;
-  let days = remainAge * 365;
 
-  let result = days * amoutPerDay;
-
-  return result;
-}
-
-document.write(
-  "You will need " +
-    calculateSupply(30, 3) +
-    " cups of tea to last you until the ripe old age of 100"
-);
 
 /*
 4
