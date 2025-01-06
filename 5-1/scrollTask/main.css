@@ -1,0 +1,16 @@
+
+body {
+    height: 3000px;
+}
+
+i {
+    position: fixed;
+    bottom: 20px;
+    right: -35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show {
+    right: 20px;
+}
