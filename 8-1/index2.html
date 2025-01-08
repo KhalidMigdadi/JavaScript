@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        #cardContainer {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        
+        .card {
+            border:  3px solid ;
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>User Cards</h1>
+    <button id="loadButton">Load Cards</button>
+
+    <div id="cardContainer"></div>
+
+    <script>
+        let container = document.getElementById("cardContainer");
+  
+        let btn = document.getElementById("loadButton");
+  
+        btn.addEventListener("click", function () {
+          fetch("https://api.npoint.io/d9c711a6b54e76c1357c")
+            .then((response) => response.json())
+            .then((data) => {
+              container.innerHTML = ""; // Optional: Clear old content before loading new data
+              for (let i = 0; i < data.length; i++) {
+                let users = data[i];
+                let cards = document.createElement("div");
+  
+                cards.className = "card"
+  
+                cards.innerHTML = `
+                          <h3>Name: ${users.name}</h3>
+                          <p>Age: ${users.age}</p>
+                          <p>Email: ${users.email}</p>
+                          <p>Profession: ${users.profession}</p>
+                      `;
+  
+                container.appendChild(cards);
+              }
+            });
+        });
+      </script>
+  </body>
+</html>
