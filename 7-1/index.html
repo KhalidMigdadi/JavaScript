@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        span {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+
 </head>
 <body>
 
     <form action="">
         <label for="">Enter FName: </label>
         <br>
-        <input type="text" name="" id="FName" onkeyup="ValidFName()">
-        <span id="Error-FName"></span>
+        <input type="text" name="" id="FName">
+        <span id="ErrorFname"></span>
         <br>
         <label for="">Enter LName: </label>
         <br>
@@ -19,11 +27,13 @@
         <br>
         <label for="">Enter BDate: </label>
         <br>
-        <input type="text" name="" id="BDate" onkeyup="ValidBdate()">
+        <input type="text" name="" id="BDate">
+        <span id="ErrorDate"></span>
         <br>    
         <label for="">Enter Email: </label>
         <br>
-        <input type="email" name="" id="email" onkeyup="Validemail()">
+        <input type="email" name="" id="email">
+        <span id="EmailError"></span>
         <br>
         <label for="">Confirm: </label>
         <br>
@@ -41,16 +51,32 @@
 
     <script>
         let Fname = document.getElementById("FName");
-        let ErrorFname = document.getElementById("FName");
+        let errorFname = document.getElementById("ErrorFname");
 
-        let Bdate = document.getElementById("BDate");
-        let email = document.getElementById("email");
-
-        function ValidFName() {
+        Fname.addEventListener('input', function() {
             if (!Fname.value.match(/^[a-zA-Z]+$/)) {
-                ErrorFname.innerHTML = "Number Are Not Allowed"
+                errorFname.innerHTML = "Number Are Not Allowed"
             }
-        }
+        })
+
+        let Bdate = document.getElementById("BDate")
+        let errorDate = document.getElementById("ErrorDate")
+
+        Bdate.addEventListener('input', function() {
+            if(!Bdate.value.match(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]) $/)) {
+                errorDate.innerHTML = "The Formate Should be dd/mm/yyyy"
+            }
+        })
+
+
+        let email = document.getElementById("email")
+        let errorEmail = document.getElementById("EmailError")
+
+        email.addEventListener('input', function() {
+            if(!email.value.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+                errorEmail.innerHTML = "The e-mail is not valid";
+            }
+        })
 
 
     </script>

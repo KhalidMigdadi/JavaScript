@@ -10,21 +10,14 @@ Ex: tellFortune('software engineer', 'Jordan', 'Alice', 3);
 => "You will be a software engineer in Jordan, and married to Alice with 3 kids."
 */
 
+
+
+
 function tellFortune(job, location, partnerName, children) {
-  document.write(
-    '"You will be a ' +
-      job +
-      " in " +
-      location +
-      ", and married to " +
-      partnerName +
-      " with " +
-      children +
-      ' kids ."'
-  );
+  console.log('"You will be a ' + job +" in " +location +", and married to " +partnerName +" with " +children +' kids ."');
 }
 
-tellFortune("software engineer", "Jordan", "Alice", 3);
+tellFortune("software engineer", "Jordan", "BM", 3);
 
 /*
 2
@@ -40,12 +33,12 @@ Ex: calculateDogAge(1);
 */
 
 function calculateDogAge(puppyAge) {
-  return puppyAge * 7;
+  let age = puppyAge * 7
+  return age;
+  
 }
 
-document.write(
-  "Your doggie is " + calculateDogAge(1) + " years old in dog years!"
-);
+console.log ("Your doggie is " + calculateDogAge(5) + " years old in dog years!");
 
 /*
 3
@@ -58,6 +51,17 @@ outputs the result to the screen like so:
 Ex: calculateSupply(30, 3);
 => 'You will need 76650 cups of tea to last you until the ripe old age of 100;
 */
+
+function calculateSupply(age, amoutPerDay) {
+  let remainAge = 100 - age;
+  let days = remainAge * 365;
+
+  let result = days * amoutPerDay;
+
+  return result;
+}
+
+console.log("You will need " + calculateSupply(28, 3) +" cups of tea to last you until the ripe old age of 100");
 
 
 
@@ -72,18 +76,25 @@ Ex: greet("Adam")
 */
 
 function greet(name) {
-  return "Hello " + name;
+  let x = "Hello " + name;
+
+  return x;
 }
 
-document.write(greet("Khalid"));
+console.log(greet("Khalid"));
+console.log(greet("Ayman"));
+console.log(greet("Ali"));
+console.log(greet("Hazem"));
+
+
 
 /*
 5
 what is the error:
+
 function double(cat) {
   return 2 * x;
 }
-
 Sol : we didint call the parameter cat in the function so instead of x put cat 
 
 function double(7) {
@@ -100,6 +111,9 @@ sol : we cant sent parameter as string but it must be variable
     
     
 */
+
+
+
 
 /*
 6
@@ -152,11 +166,11 @@ Ex: cube(4)
 */
 
 function cube(number) {
-  // return pow(x, 3)
   return number * number * number;
 }
 
-cube(4);
+console.log(cube(4));
+
 
 /*
 8
@@ -173,7 +187,8 @@ function multiply(num1, num2) {
   return num1 * num2;
 }
 
-multiply(3, 4);
+console.log(multiply(3, 4));
+
 
 /*
 9
@@ -193,10 +208,21 @@ Ex: canIGetADrivingLicense(20)
 
 */
 
-function canIGetADrivingLicense(yourAge) {
-  if (yourAge >= 20) return "yes you can";
-  else return "please come back after X years to get one";
+function canIGetADrivingLicense(yourAge, isRecomended) {
+  if (yourAge>=20) {
+    return "yes you can";
+  }
+  else if (isRecomended == true)
+    return "yes you can because you are recomended"
+  else 
+  {
+    return "please come back after X years to get one";
+  }
+  
 }
+
+console.log(canIGetADrivingLicense(10, true));
+
 
 /*
 10
@@ -220,7 +246,7 @@ function sameLength(string1, string2) {
     return false;
 }
 
-console.log(sameLength("tree", "car"));
+console.log(sameLength("tree", "care"));
 
 /*
 11
@@ -470,6 +496,7 @@ function average(n1, n2, n3, n4, n5) {
 }
 
 console.log(average(5,7,9,3,5));
+
 
 
 /*
