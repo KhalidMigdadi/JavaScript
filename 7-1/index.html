@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="">
+        <label for="">Enter FName: </label>
+        <br>
+        <input type="text" name="" id="FName" onkeyup="ValidFName()">
+        <span id="Error-FName"></span>
+        <br>
+        <label for="">Enter LName: </label>
+        <br>
+        <input type="text" name="" id="LName">
+        <br>
+        <label for="">Enter BDate: </label>
+        <br>
+        <input type="text" name="" id="BDate" onkeyup="ValidBdate()">
+        <br>    
+        <label for="">Enter Email: </label>
+        <br>
+        <input type="email" name="" id="email" onkeyup="Validemail()">
+        <br>
+        <label for="">Confirm: </label>
+        <br>
+        <input type="email" name="" id="email">
+        <br>
+        <label for="">Enter Passowrd: </label>
+        <br>
+        <input type="password" name="" id="email">
+        <br>
+        <label for="">Passowrd: </label>
+        <br>
+        <input type="password" name="" id="email">
+    </form>
+
+
+    <script>
+        let Fname = document.getElementById("FName");
+        let ErrorFname = document.getElementById("FName");
+
+        let Bdate = document.getElementById("BDate");
+        let email = document.getElementById("email");
+
+        function ValidFName() {
+            if (!Fname.value.match(/^[a-zA-Z]+$/)) {
+                ErrorFname.innerHTML = "Number Are Not Allowed"
+            }
+        }
+
+
+    </script>
+</body>
+</html>
